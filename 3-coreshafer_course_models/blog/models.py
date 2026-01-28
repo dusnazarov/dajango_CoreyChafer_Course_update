@@ -11,3 +11,22 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+
+"""  
+python manage.py shell
+from django.contrib.auth.models import User
+from blog.models import Post
+
+user=User.objects.first()
+user.save() 
+post=Post(title="my first post", content="This is the content of my first post",author=user)
+post.save()
+post.author.username
+post.author.email
+posts_by_user = user.post_set.all()
+created_post = user.post_set.create(title="my second post",content="second content") 
+
+"""
