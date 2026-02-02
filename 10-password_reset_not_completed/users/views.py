@@ -8,6 +8,8 @@ from django.contrib.auth.decorators import login_required
 
 
 def register(request):
+
+    
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
@@ -45,3 +47,21 @@ def profile(request):
     }   
     return render(request, 'users/profile.html', context)
 
+
+
+
+
+# from django.contrib.auth import authenticate
+
+# user = authenticate(username="TestUser", password="tu$1115tu$")
+# if user is not None:
+#     print("Authenticated")
+#     # A backend authenticated the credentials
+#     ...
+# else:
+#     # No backend authenticated the credentials
+#     ...
+#     print("Not authenticated")
+
+# print(user)
+# print('hello')
